@@ -108,6 +108,17 @@ to provide accurate ground-state photoelectron spectra, including excitation ene
 taking the effect of the environment on a subsystem of interest into account. Recent formulation of FDE have shown that FDE still possesses an exact framework that allows the DFT to be substituted with WFT for one subsystem (WFT-in-DFT) \citep{gomes2008calculation,hofener2013solvatochromic} or for all the
 subsystem under consideration (WFT-in-WFT) \citep{hofener2012calculation} as well as the incorporation of coupled-cluster theory, making it possible to calculate the embedding potential for the ground state as well as the excited states at high accuracy and with less computational cost. 
 
+\section{Potential Model}
+To study the adsorption of HCl on ice surface, we describe the surface interaction potential between them. To compute the intramolecular and molecule-surface interaction energy of this system, the charges, center of masses, and radii for each atom and atom pairs were taken and applied to their corresponding force fields. Based on the fact that different force fields employ different parameter sets, the interaction potential arising from the collision between the HCl and the surface of ice was considered as additive, consisting of the sum of pair potentials, $V_{HCl-H_{2}O}$ over all water molecules(w), which can be expressed as
+\begin{equation}\label{aede3}
+V_{HCl-ice} =  \sum_{w,w_{i},j}\frac{q_{i}q_{j}}{r_{w_{i},j}} + \sum_{w,w_{i},j}\frac{C_{6_{i,j}}}{r_{w_{i},j}^{6}}D(r_{w_{i},j}) + \sum_{w,w_{i},j}a_{i,j}exp(-b_{i,j}r_{w_{i},j})
+\end{equation}
+where the fisrt term on the right hand side of the above equation is the electrostatic potential from the attraction and repulsion between charges of the HCl and water molecules, the second term is the dispersion potential and the last term is the short-range repulsion potential. The $q_{i}'s$ and $q_{j}'s$ are the charges on the water molecules and the HCl molecule respectively and the $r_{w_{i},j}$ is the distance between the charges. The $a_{i,j}$ and $b_{i,j}$ in the repulsion potential contribution are atom-atom parameters (X-Y), where X= H, O and Y= Cl, H . In the case of the dispersion potential, the coefficient $C_{6}$ is from $X-H_{2}O$, where i = X, (X= Cl, H) and j = $H_{2}O$ based on the Slater-Kirkwood formula, the $r_{w_{i},j}$ is the distance between the centers of mass of the molecules and the $D(r_{w_{i},j})$ is a damping function.
+
+For the water molecules, point charges based on the TIP4P pair potential model \citep{jorgensen1983comparison} was used to describe them. This model type consists of two positive point charges representing the hydrogen atoms (+0.52 au) and a negative point charge (-1.04 au) situated at the bisection of the hydrogen sites near the oxygen atom of the water molecule. For the HCl molecule, it was describe with a positive point charge (+0.403 au), a negative point charge (-0.909 au) representing hydrogen atom and chlorine atom respectively and a third positive point charge (+0.506 au) located in a direction opposite the hydrogen atom and 1 au away from the chlorine atom. The values of the parameters $C_{6}$ in the dispersion term, and $a_{i,j}$ and $b_{i,j}$ in repulsion term to describe the surface interaction potential between HCl on ice were taken from \citep{woittequand2007classical}. The value of the $D(r_{w_{i},j})$ was obtained by applying the damping function equation \citep{kroes1992sticking}.
+
+
+
 
 
 
