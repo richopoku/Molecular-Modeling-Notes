@@ -119,6 +119,41 @@ where the fisrt term on the right hand side of the above equation is the electro
 For the water molecules, point charges based on the TIP4P pair potential model \citep{jorgensen1983comparison} was used to describe them. This model type consists of two positive point charges representing the hydrogen atoms (+0.52 au) and a negative point charge (-1.04 au) situated at the bisection of the hydrogen sites near the oxygen atom of the water molecule. For the HCl molecule, it was describe with a positive point charge (+0.403 au), a negative point charge (-0.909 au) representing hydrogen atom and chlorine atom respectively and a third positive point charge (+0.506 au) located in a direction opposite the hydrogen atom and 1 au away from the chlorine atom. The values of the parameters $C_{6}$ in the dispersion term, and $a_{i,j}$ and $b_{i,j}$ in repulsion term to describe the surface interaction potential between HCl on ice were taken from \citep{woittequand2007classical}. The value of the $D(r_{w_{i},j})$ was obtained by applying the damping function equation \citep{kroes1992sticking}.
 
 
+\section{Results of comparison between SAOP and PBE}
+To evaluate our computational approach, it was essential to compare the effects of water molecules on the halogen of the adsorption of  the HCl molecule on ice surface with different functionals. To attain this, we analyzed the orbital energy of our molecular system with the SAOP model and PBE functional. Based on the calcultion, it was observed that the GGA's provide inaccurate orbital energy of the highest occupied molecular orbital (HOMO) as the number of water molecules. The PBE functional gave values for the HOMO energy that were either spurious or too high compared to those of the SAOP model as shown in table ~\ref{table1}. This attest to the fact that GGA`s do not have the right asymptotic behavior to reduce self interaction errors as increase in the number of molecules occurs and can compromise the ionization potential. From figure ~\ref{figure1}, it can be seen the PBE functional has problem with charge transfer due its deficiency to account for integral discontinuity in the total energy for large system. The SAOP model on the other hand proved to be an excellent approximation to compute the HOMO orbital energies and can predict the ionization energy of the molecular system of interest accurately based on the dependence of the HOMO energy on the ionization potential in the Koopmann's theorem. By comparing both models, we can suggest that the significant number charges allocated to the halogen in the SAOP  model and its asymptotic behavior makes the highest occupied molecular orbital (HOMO) more localized and tightly bound compared to the PBE model as the solvent system icreases. 
+
+\begin{figure}[H]\large
+\includegraphics[width = 10.0cm, trim = -10cm 0cm 35cm 0cm]{combfunc1.png}
+\caption{Localization of the HOMO of the halogen using different exchange correlation models.}
+\label{figure1}
+\end{figure}
+
+\begin{table}[H]\small
+\begin{center}
+\caption{Comparison of the highest occupied molecular orbital (HOMO) energies for SAOP and PBE as a function of variation of in the number of water molecules of HCl adsorption on ice surface} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&HOMO energies (au)&Charge on halogen &HOMO energies (au)&Charge on halogen \\
+&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(PBE)&\hspace*{1.0cm}(PBE)\\ 
+\hline
+1 $H_{2}O$&\hspace*{1.0cm}-0.106&\hspace*{1.0cm}-0.951&\hspace*{1.0cm}0.034&\hspace*{1.0cm}-0.932\\
+\hline
+10 $H_{2}O$&\hspace*{1.0cm}-0.126&\hspace*{1.0cm}-0.999&\hspace*{1.0cm}0.021&\hspace*{1.0cm}-0.996\\
+\hline
+50 $H_{2}O$&\hspace*{1.0cm}-0.117&\hspace*{1.0cm}-0.998&\hspace*{1.0cm}0.145&\hspace*{1.0cm}1.000\\
+\hline
+100 $H_{2}O$&&&&\\
+\hline
+150 $H_{2}O$&&&&\\
+\hline
+200 $H_{2}O$&&&&\\
+\hline
+\end{tabular}
+\label{table1}
+\end{center}
+\end{table}
+
+
 
 
 
