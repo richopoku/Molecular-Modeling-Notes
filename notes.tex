@@ -118,12 +118,18 @@ where the fisrt term on the right hand side of the above equation is the electro
 For the water molecules, point charges based on the TIP4P pair potential model \citep{jorgensen1983comparison} was used to describe them. This model type consists of two positive point charges representing the hydrogen atoms (+0.52 au) and a negative point charge (-1.04 au) situated at the bisection of the hydrogen sites near the oxygen atom of the water molecule. For the HCl molecule, it was describe with a positive point charge (+0.403 au), a negative point charge (-0.909 au) representing hydrogen atom and chlorine atom respectively and a third positive point charge (+0.506 au) located in a direction opposite the hydrogen atom and 1 au away from the chlorine atom. The values of the parameters $C_{6}$ in the dispersion term, and $a_{i,j}$ and $b_{i,j}$ in repulsion term to describe the surface interaction potential between HCl on ice were taken from \citep{woittequand2007classical}. The value of the $D(r_{w_{i},j})$ was obtained by applying the damping function equation \citep{kroes1992sticking}.
 
 \section{Discussion on the potential model}
-We now discuss the potential energy surface (PES) derived from the classical force fields. At shorter distances for HCl interaction with water molecules on ice, the dispersion potential contribution to the total interaction energy tend to decrease to interatomic distance around 9{{\AA}}. For the repulsive potential contribution, it increase to around 7{{\AA}}. In both cases, a constant trajectory is observed for large intermolecular distances at energies around -0.183 eV and 0.00030 eV for the dispersive and repulsive part respectively. The electrostatic potential on the other hand decreased in energy at shorter interatomic distances to a minimum of -0.295 eV around 10{{\AA}} and then converges to a constant path at larger distances. From figure, it can be seen that at large intermolecular distance, the effect of the adsorption on the water molecules on ice is less pronounced and have negligible effect on the total interaction energy due to weak interaction between them. The interaction energy curve derived from the electrostatic appears to be similar to the interaction energy curve. For this reason, we can suggest that the adsorption of HCl on ice surface gives a total interaction energy that evolves mainly from the electrostatic part of the force field and that contribution from the dispersion and repulsion potential play a minor role in the interaction energy of the molecular system of interest.
+We now discuss the potential energy surface (PES) derived from the classical force fields. At shorter distances for HCl interaction with water molecules on ice, the dispersion potential contribution to the total interaction energy tend to decrease to interatomic distance around 9{{\AA}}. For the repulsive potential contribution, it increase to around 7{{\AA}}. In both cases, a constant trajectory is observed for large intermolecular distances at energies around -0.183 eV and 0.00030 eV for the dispersive and repulsive part respectively. The electrostatic potential on the other hand decreased in energy at shorter interatomic distances to a minimum of -0.295 eV around 10{{\AA}} and then converges to a constant path at larger distances. From figure ~\ref{figure12}, it can be seen that at large intermolecular distance, the effect of the adsorption on the water molecules on ice is less pronounced and have negligible effect on the total interaction energy due to weak interaction between them. The interaction energy curve derived from the electrostatic as depicted in ~\ref{figure6} appears to be similar to the total interaction energy curve in ~\ref{figure12}. For this reason, we can suggest that the adsorption of HCl on ice surface gives a total interaction energy that evolves mainly from the electrostatic part of the force field and that contribution from the dispersion and repulsion potential play a minor role in the interaction energy of the molecular system of interest.
 
 \begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{potcomb.png}
-\caption{The potential energy of the interaction of HCl on the surface of ice.}
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{angs_energy.png}
+\caption{Various potential energy contribution to the total interaction energy of HCl adsorption ice surface.}
 \label{figure6}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nowat_energy.png}
+\caption{Total interaction energy of HCl on the surface of ice and the change in the total interaction energy as a function of the variation in the number of water molecules.}
+\label{figure12}
 \end{figure}
 
 
@@ -137,6 +143,39 @@ To evaluate our computational approach, it was essential to compare the effects 
 \end{figure}
 
 
+\begin{table}[H]\small
+\begin{center}
+\caption{Comparison of the orbital energies for SAOP and PBE as a function of variation of in the number of water molecules of Chloride ion adsorption on ice surface} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&HOMO energies (eV)&LUMO energies (eV)&HOMO energies (eV)&LUMO energies (eV) \\
+&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(PBE)&\hspace*{1.0cm}(PBE)\\ 
+\hline
+$Cl^{-}$&\hspace*{1.0cm}-3.27&\hspace*{1.0cm}-8.84&\hspace*{1.0cm}0.79&\hspace*{1.0cm}12.87\\
+\hline
+$Cl^{-}$/1 $H_{2}O$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-2.37&\hspace*{1.0cm}7.70&\hspace*{1.0cm}-18.47\\
+\hline
+$Cl^{-}$/10 $H_{2}O$&\hspace*{1.0cm}-3.43&\hspace*{1.0cm}-2.61&\hspace*{1.0cm}3.29&\hspace*{1.0cm}-17.47\\
+\hline
+$Cl^{-}$/50 $H_{2}O$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-3.65&\hspace*{1.0cm}3.95&\hspace*{1.0cm}-18.20\\
+\hline
+$Cl^{-}$/100 $H_{2}O$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.46&\hspace*{1.0cm}6.29&\hspace*{1.0cm}-20.33\\
+\hline
+$Cl^{-}$/150 $H_{2}O$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.35&\hspace*{1.0cm}4.30&\hspace*{1.0cm}-17.93\\
+\hline
+$Cl^{-}$/200 $H_{2}O$&\hspace*{1.0cm}-3.07&\hspace*{1.0cm}-2.61&\hspace*{1.0cm}3.16&\hspace*{1.0cm}-24.33\\
+\hline
+\end{tabular}
+\label{table1}
+\end{center}
+\end{table}
+
+
+
+
+
+\section{Results of the impact of Cl ion on ice surface}
+Density of state (DOS) is useful to investigate the differences in the dynamics of the same kind of molecules. Figure ~\ref{figure1a} (a) and (b) depicts the DOS of chloride ion and solvated chloride ion respectively. The band close to -0.12 au (-3.3 eV) on both figures corresponds to the HOMO of the chloride ion. It can be seen that there is clear difference between the two spectrum. For the solvated chloride ion, the peaks seem to become broader compared to that of the unsolvated chloride ion. This is an indication that the quasi-liquid layer (QLL) on ice surface influences the ionic chloride. We must say that the total DOS changes drastically as the number of water molecules interacting with ionic chloride increases, however, the HOMO energies seem to remain almost the same. This is an indication that only few water molecules on ice surface is required to perturb the chloride and bind them into solvation. Thus, increase in the number of water molceules does lead to significat changes in the the orbital energies of HCl adsorption on ice surface as shown in figure ~\ref{figure1a} and ~\ref{figure2a}
 
 \begin{figure}[H]\large
 \includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb50.png}
@@ -145,73 +184,130 @@ To evaluate our computational approach, it was essential to compare the effects 
 \end{figure}
 
 \begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb200.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (200 water molecules).}
-\label{figure4b}
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb100.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with SAOP model (100 water molecules).}
+\label{figure2a}
 \end{figure}
+
+
 
 \begin{table}[H]\small
 \begin{center}
-\caption{Comparison of the highest occupied molecular orbital (HOMO) energies for SAOP and PBE as a function of variation of in the number of water molecules of Chloride ion adsorption on ice surface} \label{tab:1}
-\begin{tabular}{|l|l|l|l|l|}
+\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{50}$} \label{tab:5}
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline
-&HOMO energies (au)&LUMO energies (au)&HOMO energies (au)&LUMO energies (au) \\
-&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(PBE)&\hspace*{1.0cm}(PBE)\\ 
+$[Cl(H_{2}O)_{50}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{50}]$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{50}]$\\
+\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm} CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
 \hline
-$Cl^{-}$&\hspace*{1.0cm}-0.120&\hspace*{1.0cm}0.325&\hspace*{1.0cm}0.029&\hspace*{1.0cm}0.473\\
+\hspace*{0.5cm}-3.24&\hspace*{0.5cm}-2.97&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-$Cl^{-}$/1 $H_{2}O$&\hspace*{1.0cm}-0.119&\hspace*{1.0cm}-0.087&\hspace*{1.0cm}0.283&\hspace*{1.0cm}-0.679\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.03&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-$Cl^{-}$/10 $H_{2}O$&\hspace*{1.0cm}-0.126&\hspace*{1.0cm}-0.096&\hspace*{1.0cm}0.021&\hspace*{1.0cm}-0.002\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-$Cl^{-}$/50 $H_{2}O$&\hspace*{1.0cm}-0.116&\hspace*{1.0cm}-0.134&\hspace*{1.0cm}0.145&\hspace*{1.0cm}-0.669\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-$Cl^{-}$/100 $H_{2}O$&&&\hspace*{1.0cm}0.006&\hspace*{1.0cm}-0.047\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-$Cl^{-}$/150 $H_{2}O$&&&\hspace*{1.0cm}0.158&\hspace*{1.0cm}-0.659\\
-\hline
-$Cl^{-}$/200 $H_{2}O$&&&\hspace*{1.0cm}0.116&\hspace*{1.0cm}-0.894\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
 \end{tabular}
-\label{table1}
+\label{table5}
 \end{center}
 \end{table}
 
 
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{pbegraph.png}
-\caption{The orbital energies with change in the number of water molecules on ice using the PBE functional.}
-\label{figure5}
-\end{figure}
-
 \begin{table}[H]\small
 \begin{center}
-\caption{Comparison of the highest occupied molecular orbital (HOMO) energies for SAOP and PBE as a function of variation of in the number of water molecules of HCl adsorption on ice surface} \label{tab:1}
-\begin{tabular}{|l|l|l|l|l|}
+\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{100}$ } \label{tab:6}
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline
-&HOMO energies (au)&LUMO energies (au)&HOMO energies (au)&LUMO energies (au) \\
-&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(PBE)&\hspace*{1.0cm}(PBE)\\ 
+$[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{100}]$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{100}]$\\
+\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
 \hline
-HCl&\hspace*{1.0cm}-0.458&\hspace*{1.0cm}-0.190&\hspace*{1.0cm}-0.295&\hspace*{1.0cm}-0.365\\
+\hspace*{0.5cm}-3.13&\hspace*{0.5cm}-2.73&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/1 $H_{2}O$&\hspace*{1.0cm}-0.456&\hspace*{1.0cm}-0.190&\hspace*{1.0cm}-0.267&\hspace*{1.0cm}-0.036\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/10 $H_{2}O$&\hspace*{1.0cm}-0.450&\hspace*{1.0cm}-0.195&\hspace*{1.0cm}-0.261&\hspace*{1.0cm}-0.043\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/50 $H_{2}O$&\hspace*{1.0cm}-0.399&\hspace*{1.0cm}-0.222&\hspace*{1.0cm}-0.214&\hspace*{1.0cm}-0.086\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/100 $H_{2}O$&\hspace*{1.0cm}-0.372&\hspace*{1.0cm}-0.211&\hspace*{1.0cm}&\hspace*{1.0cm}\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/150 $H_{2}O$&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
-HCl/200 $H_{2}O$&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}\\
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
 \hline
 \end{tabular}
-\label{table1}
+\label{table6}
 \end{center}
 \end{table}
 
 
+
+\begin{table}[H]\small
+\begin{center}
+\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{200}$ } \label{tab:7}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+$[Cl(H_{2}O)_{200}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$\\
+\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+\hline
+\hspace*{0.5cm}-3.07&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\end{tabular}
+\label{table7}
+\end{center}
+\end{table}
 
 
 
@@ -232,6 +328,18 @@ HCl/200 $H_{2}O$&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}&\hspace*{1.0cm}
 \includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb150.png}
 \caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (150 water molecules).}
 \label{figure3b}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb200.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (200 water molecules).}
+\label{figure4b}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{pbegraph.png}
+\caption{The orbital energies with change in the number of water molecules on ice using the PBE functional.}
+\label{figure5}
 \end{figure}
 
 
