@@ -117,6 +117,14 @@ V_{HCl-ice} =  \sum_{w,w_{i},j}\frac{q_{i}q_{j}}{r_{w_{i},j}} + \sum_{w,w_{i},j}
 where the fisrt term on the right hand side of the above equation is the electrostatic potential from the attraction and repulsion between charges of the HCl and water molecules, the second term is the dispersion potential and the last term is the short-range repulsion potential. The $q_{i}'s$ and $q_{j}'s$ are the charges on the water molecules and the HCl molecule respectively and the $r_{w_{i},j}$ is the distance between the charges. The $a_{i,j}$ and $b_{i,j}$ in the repulsion potential contribution are atom-atom parameters (X-Y), where X= H, O and Y= Cl, H . In the case of the dispersion potential, the coefficient $C_{6}$ is from $X-H_{2}O$, where i = X, (X= Cl, H) and j = $H_{2}O$ based on the Slater-Kirkwood formula, the $r_{w_{i},j}$ is the distance between the centers of mass of the molecules and the $D(r_{w_{i},j})$ is a damping function.\\
 For the water molecules, point charges based on the TIP4P pair potential model \citep{jorgensen1983comparison} was used to describe them. This model type consists of two positive point charges representing the hydrogen atoms (+0.52 au) and a negative point charge (-1.04 au) situated at the bisection of the hydrogen sites near the oxygen atom of the water molecule. For the HCl molecule, it was describe with a positive point charge (+0.403 au), a negative point charge (-0.909 au) representing hydrogen atom and chlorine atom respectively and a third positive point charge (+0.506 au) located in a direction opposite the hydrogen atom and 1 au away from the chlorine atom. The values of the parameters $C_{6}$ in the dispersion term, and $a_{i,j}$ and $b_{i,j}$ in repulsion term to describe the surface interaction potential between HCl on ice were taken from \citep{woittequand2007classical}. The value of the $D(r_{w_{i},j})$ was obtained by applying the damping function equation \citep{kroes1992sticking}.
 
+Scalar relativistic (SR) zero-order regular approximation (ZORA) Hamiltonian contain relativistic effects such as spin orbit coupling. It has been shown that, the potential dependent expansion in the ZORA gives a second order differential equation that is variationally stable and is able to provide accurate electron energies and densities of the valence orbitals in self-consistent all-electron and frozen-core calculations \citep{lenthe1993relativistic}.
+
+According to \citep{van2003optimized}, electron basis sets with triple-zeta quality with two polarization (TZ2P) functions added and quadruple-zeta valence quality with four polarization added (QZ4P) can provide accurate orbital energies for chloride anion with reduced error compared to double-zeta (DZ) basis sets. It was suggested that the use of TZ2P and QZ4P in ZORA gives orbital energies that is accurate with less error compared to the use of the fully relativistic Dirac equation.
+
+PBE density functinal \citep{perdew1996generalized} gives accurate description of the linear response of spin-unpolarized uniform electron gas due its ability to incorporate inhomogeneity effects in the density. In this respect, it is able to predict accurately the correct behavior under uniform scaling, smoother potential potential and atomization of energies of moleucles.  
+
+Uncontracted augmented triple-zeta basis set with only two correlating d functions is able to describe the spin-orbit splitting of the 2p orbital in chloride at the Dirac-Hartree-Fock level \citep{dyall2016relativistic}.
+
 \section{Discussion on the potential model}
 We now discuss the potential energy surface (PES) derived from the classical force fields. At shorter distances for HCl interaction with water molecules on ice, the dispersion potential contribution to the total interaction energy tend to decrease to interatomic distance around 9{{\AA}}. For the repulsive potential contribution, it increase to around 7{{\AA}}. In both cases, a constant trajectory is observed for large intermolecular distances at energies around -0.183 eV and 0.00030 eV for the dispersive and repulsive part respectively. The electrostatic potential on the other hand decreased in energy at shorter interatomic distances to a minimum of -0.295 eV around 10{{\AA}} and then converges to a constant path at larger distances. From figure ~\ref{figure12}, it can be seen that at large intermolecular distance, the effect of the adsorption on the water molecules on ice is less pronounced and have negligible effect on the total interaction energy due to weak interaction between them. The interaction energy curve derived from the electrostatic as depicted in ~\ref{figure6} appears to be similar to the total interaction energy curve in ~\ref{figure12}. For this reason, we can suggest that the adsorption of HCl on ice surface gives a total interaction energy that evolves mainly from the electrostatic part of the force field and that contribution from the dispersion and repulsion potential play a minor role in the interaction energy of the molecular system of interest.
 
@@ -252,9 +260,27 @@ $[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{
 
 
 \begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{renocom_sns.png}
-\caption{Effect of the quasi-liquid layer on ice on chloride ion using different FDE approaches.}
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallbar.png}
+\caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
 \label{figure45}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallline.png}
+\caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
+\label{figure46}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{renocom.png}
+\caption{Effect of ice on chloride ion for 50 water molecules using different FDE approaches.}
+\label{figure47}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{sns.png}
+\caption{comaprison between the supermolecules of the effect the quasi-liquid layer on ice on chloride anion for 50 and 100 water molecules.}
+\label{figure48}
 \end{figure}
 
 
