@@ -74,7 +74,9 @@ solvated HCl. The photoelectron spectroscopy experiment further revealed that th
 hydrogen bonding network of the water ice by binding them into solvation \citep{kong2017coexistence}. In this respect, there is the need for
 molecular dynamics simulation in order to either provide theoretical support or give detailed information on the type of bonding at the 
 core-valence regions to the experimental findings. 
-Theoretical studies based on semi-empirical method aimed to provide understanding of the electronic properties of solvated HCl  
+
+to provide accurate ground-state photoelectron spectra, including excitation energies of the interaction hydrogen chloride on ice surface. This complicated approach give reliable ground- and excited-state properties based on its partitioning of large systems into subsystems and
+taking the effect of the environment on a subsystem of interest into account. Recent formulation of FDE have shown that FDE still possesses an exact framework that allows the DFT to be substituted with WFT for Theoretical studies based on semi-empirical method aimed to provide understanding of the electronic properties of solvated HCl  
 determined no chemical shift in the binding energies between ionic and covalent chlorine. These observations 
 fact that semi-empirical methods overestimate the proton transfer barrier and underestimate the proton affinity of chloride anions
 \citep{arillo2007can}. Recent studies probing the ground-state properties of hydrogen chloride in solvent suggest that classical
@@ -103,9 +105,7 @@ and excited-state properties of halogen species \citep{shee2018equation,bouchafr
 Quite recently, \citep{peng2015energy} have developed a much more elaborate method to target core
 excitation energies within the EOM-CCSD ansatz based on the core valence separation (CVS) approximation \citep{cederbaum1980many}. This approach is seen to be
 provide a path that only includes excitations from the essential core orbitals when computing the core-level spectra. 
-In this study, we present the use of a new approach in the DFT in the form the so-called frozen density embedding (FDE) method and  CVS-EOM-CCSD 
-to provide accurate ground-state photoelectron spectra, including excitation energies of the interaction hydrogen chloride on ice surface. This complicated approach give reliable ground- and excited-state properties based on its partitioning of large systems into subsystems and
-taking the effect of the environment on a subsystem of interest into account. Recent formulation of FDE have shown that FDE still possesses an exact framework that allows the DFT to be substituted with WFT for one subsystem (WFT-in-DFT) \citep{gomes2008calculation,hofener2013solvatochromic,daday2013state} or for all the
+In this study, we present the use of a new approach in the DFT in the form the so-called frozen density embedding (FDE) method and  CVS-EOM-CCSD one subsystem (WFT-in-DFT) \citep{gomes2008calculation,hofener2013solvatochromic,daday2013state} or for all the
 subsystem under consideration (WFT-in-WFT) \citep{hofener2012calculation} as well as the incorporation of coupled-cluster theory, making it possible to calculate the embedding potential for the ground state as well as the excited states at high accuracy and with less computational cost.\\
 In the evaluation of the binding energy of the interaction HCl with ice surface, the statistical averaging orbital potential (SAOP) model \citep{schipper2000molecular} would be employed prior to the DFT calculation. Photoelectron spectra obtained with the SAOP model suggest that it provides balanced approach to the exchange correlation potential that predict accurately the ionization energies \citep{lemierre2005calculation, segala2009evaluation} and binding energies of molecules at the core level \citep{takahata2003dft}. The reason being that, the approximation based on the SAOP model has a perfect long-range (asymptotic) behavior with the ability to reduce self interaction errors in cases where there are discontinuities in the derivative of the total energy as the  number of particles varies and also to correctly depict atomic shell structure both in the inner and outer regions which are necessary in the evaluation of ionization potentials in the Kohn-Sham densities\citep{tecmer2011electronic} compared to (meta)GGA`s, which underestimate the ionization potential in such situation. 
 
@@ -130,14 +130,32 @@ We now discuss the potential energy surface (PES) derived from the classical for
 
 \begin{figure}[H]\large
 \includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{angs_energy.png}
-\caption{Various potential energy contribution to the total interaction energy of HCl adsorption ice surface.}
+\caption{Various potential contribution to the total interaction energy of HCl adsorption ice surface.}
 \label{figure6}
 \end{figure}
 
 \begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nowat_energy.png}
-\caption{Total interaction energy of HCl on the surface of ice and the change in the total interaction energy as a function of the variation in the number of water molecules.}
+\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn50un.png}
+\caption{Total interaction potential of HCl on the surface of ice for 50 water molecules.}
 \label{figure12}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn100.png}
+\caption{Total interaction potential of HCl on the surface of ice for 100 water molecules.}
+\label{figure101}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn200.png}
+\caption{Total interaction potential of HCl on the surface of ice for 200 water molecules.}
+\label{figure102}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{potent_total.png}
+\caption{Comparison of the total interaction potential of HCl on ice surface.}
+\label{figure103}
 \end{figure}
 
 
@@ -366,12 +384,6 @@ $[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{
 \caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (200 water molecules).}
 \label{figure4b}
 \end{figure}
-
-
-
-
-
-
 
 
 
