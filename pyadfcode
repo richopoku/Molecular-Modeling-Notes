@@ -1,0 +1,58 @@
+coords   = os.path.join (pyadfenv.outdir, 'coordinates.xyz')
+
+snap = molecule(coords)
+allmol = snap.separate()
+
+
+
+settings = adfsettings()
+settings.set_ZORA(True)
+settings.set_functional('SAOP')
+settings.set_save_tapes([21, 10])
+settings.set_integration (accint=4.0)
+settings.set_ncycles(500)
+myfiles.set_outputfilename("results")
+
+
+FnT_Job_opts = {'FULLGRID' : '',  'GGAPOTXFD':  'PBEX', 'GGAPOTCFD':  'PBEC', 'PW91k' : '', 'RELAXCYCLES' : 10}
+
+
+
+Frags = []
+
+m_cl = allmol[0:11]
+m_cl[0].set_charge(-1)
+print m_cl
+
+for m_cl in m_cl :
+     print m_cl
+    #m_cl.set_charge(-1)
+     m_cl.set_spin(0)
+     Frags.append(fragment(None,  m_cl ))
+
+h2oten = allmol[11:21]
+print h2oten
+for ten in h2oten :
+     print ten
+     ten.set_charge(0)
+     ten.set_spin(0)
+
+     # Prepare 10 water molecules relax
+     r_h2o_ten = adfsinglepointjob( ten, 'SZ', options=['NOSYMFIT', 'NOSYM'], settings=settings).run()
+     Frags.append(fragment(r_h2o_ten, ten, isfrozen=True, fdeoptions={"RELAX":""}))
+
+
+h2o = allmol[21:]
+print h2o
+for f in h2o :
+     print f
+     f.set_charge(0)
+     f.set_spin(0)
+
+   # Prepare rest of water molecule frozen
+     r_h2o_1 = adfsinglepointjob( f, 'SZ', options=['NOSYMFIT', 'NOSYM'], settings=settings).run()
+     Frags.append(fragment(r_h2o_1, f, isfrozen=True))
+
+
+fde_res = adffragmentsjob( Frags, basis="TZ2P", settings=settings, options=['NOSYMFIT', 'NOSYM'], fde=FnT_Job_opts).run()
+

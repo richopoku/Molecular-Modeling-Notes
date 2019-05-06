@@ -1,0 +1,381 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\graphicspath{{images/}}
+\usepackage[width=150mm,top=15mm,bottom=25mm]{geometry}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{booktabs}
+\renewcommand{\baselinestretch}{2}
+\renewcommand{\figurename}{\textbf{Figure}}
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\bibname}{References}
+\renewcommand{\baselinestretch}{2}
+\renewcommand\bibname{References}
+
+
+\thispagestyle{empty}
+
+
+
+\begin{document}
+%\maketitle
+%\chapter*{}
+
+
+\pagenumbering{roman}
+
+%\chapter*{}
+
+%\chapter*{}
+
+%\chapter*{}
+
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%\chapter{Introduction}
+\pagenumbering{arabic}
+\chapter{Summary}
+The interface between air and ice governs many phenomena that are essential to chemical processes in the atmosphere.
+Ice ever-present in the atmosphere and possess a wide range of microenvironments in which trace gases can interact, 
+including a quasi-liquid disordered layer \citep{toubin2001dynamics, bartels2014review}. Studies connected to ice indicate that it  
+can initiate and influence photochemical processes that could lead to ozone destruction \citep{solomon1999stratospheric,abbatt2003interactions}
+in the troposphere. In view of this, chemical processes at the air/liquid interface have attracted a lot of scientific research,
+of particular interest is acids with liquid water or water-like layer on ice.
+A number of surface sensitive  techniques including Infrared spectroscopy \citep{darvas2012adsorption} and vibrational sum frequency spectroscopy \citep{gordon2018model} have been conducted over the years to derive information  about the electronic properties of such reaction through the study
+of the hydrogen-bonding and proton transfer of such reaction. The reason being that the dissociation of trace gases upon interaction with
+liquid water or the liquid-like layer on ice surface is related to the distortion of the hydrogen-bonding network.
+X-ray photoelectron spectroscopy (XPS) is one of the most well-established methods to provide detailed information about the chemical
+composition and electronic properties of molecular systems \citep{hufner2013photoelectron} given its surface sensitivity.
+XPS has been applied to investigate the properties of various molecules at the core-valence region. Studies at interface between metal oxides 
+such as Bismuth Vanadate \citep{starr2017combined}, Magnesium oxide \citep{newberg2011formation}, and $\alpha-Fe_{2}O_{3}$  \citep{yamamoto2010water} and aqueous electrolyte solution have indicated that
+XPS is a powerful tool to investigate the binding energies at the core-valence region. These studies revealed that XPS is able to resolve
+metal oxide, hydroxyl, surface molecular water and water vapor peaks arising from the core-valence region of water adsorption on metal surface 
+based on their binding energies. Studies into the adiabatic electron binding energies of gaseous species including Uraniumpentachloride
+\citep{su2013joint} and Uranyl tetrafluoride \citep{dau2012observation} indicate that XPS suitable to study ionic bonding of heavier halogen complexes at the core-valence
+level. Studies conducted by \citep{olivieri2016quantitative} with XPS to investigate the ionization energies of aqueous solutions at the core level revealed huge
+shift in ionization energies of gas phase water in the presence of liquid water and that the ionization energy of the liquid water depends 
+on the chemical composition of the solution. Quite recently, the use of XPS to study the surface of saturated
+sodium chloride \citep{tissot2015cation,gaiduk2016photoelectron} indicate that XPS is able to resolve ionic chlorine form aqueous solution of sodium chloride based on the core level 
+shift of binding energies with respect to the bulk liquid.
+XPS has also been utilized to investigate the the impact of acids on liquid water or water ice at the air-liquid interface at core-valence level. 
+Investigations into the bound state of weak acid such as 2-propanol \citep{newberg2015adsorption}, acetone \citep{starr2011acetone} and acetic
+acid \citep{krepelova2013adsorption} on ice surface indicte that such species do not produce any significant changes in the hydrogen-bonding
+network of water ice. It has been suggested that, strong acid on ice surface on the other hand fully dissociate leading to modification
+in the hydrogen-bonding network of water ice at low temperatures \citep{parent2011hcl}. Quite recently, experiment on the 
+interaction of HCl at warm ice surface revealed a huge chemical shift in binding energy of 2.2 eV between covalent and ionic form of 
+solvated HCl. The photoelectron spectroscopy experiment further revealed that the ionic form of the HCl perturbs the 
+hydrogen bonding network of the water ice by binding them into solvation \citep{kong2017coexistence}. In this respect, there is the need for
+molecular dynamics simulation in order to either provide theoretical support or give detailed information on the type of bonding at the 
+core-valence regions to the experimental findings. 
+Theoretical studies based on semi-empirical method aimed to provide understanding of the electronic properties of solvated HCl  
+determined no chemical shift in the binding energies between ionic and covalent chlorine. These observations 
+fact that semi-empirical methods overestimate the proton transfer barrier and underestimate the proton affinity of chloride anions
+\citep{arillo2007can}. Recent studies probing the ground-state properties of hydrogen chloride in solvent suggest that classical
+molecular dynamics models coupled with ab initio calculations need parameterization of some of the core-core functions to provide accurate
+description of intermolecular interactions due to the  difficulties to sample transitions from the molecular form to the contact ion pair 
+form \citep{wick2017comparison}. These are indication that classical models parameterized with ab initio calculations  
+are prone to problems of potential transferability and lead to poor description of intermolecular interactions and hydrogen bonding 
+between solute and solvents if some of the electronic interactions are not optimized or parameterized. 
+At the moment, the electronic structure calculations to give predictive quantitative description of the ground-state electronic properties of
+solute-solvent systems such as solvated  hydrogen halides including excitation energies is a full quantum mechanics 
+based on the combination of first principle molecular dynamics density functional theory (DFT) and many-body perturbation theory (MBPT) in the
+$G_{0}W_{0}$ approximation. According to studies on the ionization potential and electron affinity of solute-solvent system, density functional 
+calculations followed by the $G_{0}W_{0}$ approximation \citep{gaiduk2018electron,pham2017electronic,opalka2014ionization} yield accurate 
+results in self-energy calculations, however, it lacks the ability to account for the presence of spin-dependence in coulombic interactions,
+inaccurate in its application to large and complex systems, not self-consistent \citep{aryasetiawan1998gw} and computationally costly.
+An alternative approach to the $G_{0}W_{0}$ approximation to probe the ground-state electronic properties of solute-solvent systems
+to derive photoelectron spectra is the coupled-cluster method. Coupled-cluster formalism at the single and double (triple) (CCSD(T) levels 
+\citep{bartlett2007coupled} on water clusters \citep{blase2016erratum} and implementations based on equation-of-motion at coupled-cluster single and double levels
+(EOM-CCSD) \citep{musial2011multireference} on water clusters \citep{lange2018relation} have been applied to probe the ionization potential at the ground-state level.
+These studies indicate that the use of DFT followed by CC approaches predicts binding energies of solvent systems accurately with small
+errors compared to $G_{0}W_{0}$, which underestimate the ionization potential. In addition, prediction of the ionization potential
+of water clusters based on approximate variant of EOM-CCSD \citep{dutta2017assessment,dutta2018lower} such as P-EOM-MBPT2 yield results that can be compared
+to $G_{0}W_{0}$ \citep{lange2018relation}. Not only have the EOM-CCSD proved to be a signicant tool to derive the electronic properties of water clusters but
+also shown to be a powerful approximation to accurately account for relativistic effects such as spin-orbit coupling in describing the electron affinity, ground- 
+and excited-state properties of halogen species \citep{shee2018equation,bouchafra2018predictive}. 
+Quite recently, \citep{peng2015energy} have developed a much more elaborate method to target core
+excitation energies within the EOM-CCSD ansatz based on the core valence separation (CVS) approximation \citep{cederbaum1980many}. This approach is seen to be
+provide a path that only includes excitations from the essential core orbitals when computing the core-level spectra. 
+In this study, we present the use of a new approach in the DFT in the form the so-called frozen density embedding (FDE) method and  CVS-EOM-CCSD 
+to provide accurate ground-state photoelectron spectra, including excitation energies of the interaction hydrogen chloride on ice surface. This complicated approach give reliable ground- and excited-state properties based on its partitioning of large systems into subsystems and
+taking the effect of the environment on a subsystem of interest into account. Recent formulation of FDE have shown that FDE still possesses an exact framework that allows the DFT to be substituted with WFT for one subsystem (WFT-in-DFT) \citep{gomes2008calculation,hofener2013solvatochromic,daday2013state} or for all the
+subsystem under consideration (WFT-in-WFT) \citep{hofener2012calculation} as well as the incorporation of coupled-cluster theory, making it possible to calculate the embedding potential for the ground state as well as the excited states at high accuracy and with less computational cost.\\
+In the evaluation of the binding energy of the interaction HCl with ice surface, the statistical averaging orbital potential (SAOP) model \citep{schipper2000molecular} would be employed prior to the DFT calculation. Photoelectron spectra obtained with the SAOP model suggest that it provides balanced approach to the exchange correlation potential that predict accurately the ionization energies \citep{lemierre2005calculation, segala2009evaluation} and binding energies of molecules at the core level \citep{takahata2003dft}. The reason being that, the approximation based on the SAOP model has a perfect long-range (asymptotic) behavior with the ability to reduce self interaction errors in cases where there are discontinuities in the derivative of the total energy as the  number of particles varies and also to correctly depict atomic shell structure both in the inner and outer regions which are necessary in the evaluation of ionization potentials in the Kohn-Sham densities\citep{tecmer2011electronic} compared to (meta)GGA`s, which underestimate the ionization potential in such situation. 
+
+\section{Potential Model}
+To study the adsorption of HCl on ice surface, we describe the surface interaction potential between them. To compute the intramolecular and molecule-surface interaction energy of this system, the charges, center of masses, and radii for each atom and atom pairs were taken and applied to their corresponding force fields. Based on the fact that different force fields employ different parameter sets, the interaction potential arising from the collision between the HCl and the surface of ice was considered as additive, consisting of the sum of pair potentials, $V_{HCl-H_{2}O}$ over all water molecules(w), which can be expressed as
+\begin{equation}\label{aede3}
+V_{HCl-ice} =  \sum_{w,w_{i},j}\frac{q_{i}q_{j}}{r_{w_{i},j}} + \sum_{w,w_{i},j}\frac{C_{6_{i,j}}}{r_{w_{i},j}^{6}}D(r_{w_{i},j}) + \sum_{w,w_{i},j}a_{i,j}exp(-b_{i,j}r_{w_{i},j})
+\end{equation}
+where the fisrt term on the right hand side of the above equation is the electrostatic potential from the attraction and repulsion between charges of the HCl and water molecules, the second term is the dispersion potential and the last term is the short-range repulsion potential. The $q_{i}'s$ and $q_{j}'s$ are the charges on the water molecules and the HCl molecule respectively and the $r_{w_{i},j}$ is the distance between the charges. The $a_{i,j}$ and $b_{i,j}$ in the repulsion potential contribution are atom-atom parameters (X-Y), where X= H, O and Y= Cl, H . In the case of the dispersion potential, the coefficient $C_{6}$ is from $X-H_{2}O$, where i = X, (X= Cl, H) and j = $H_{2}O$ based on the Slater-Kirkwood formula, the $r_{w_{i},j}$ is the distance between the centers of mass of the molecules and the $D(r_{w_{i},j})$ is a damping function.\\
+For the water molecules, point charges based on the TIP4P pair potential model \citep{jorgensen1983comparison} was used to describe them. This model type consists of two positive point charges representing the hydrogen atoms (+0.52 au) and a negative point charge (-1.04 au) situated at the bisection of the hydrogen sites near the oxygen atom of the water molecule. For the HCl molecule, it was describe with a positive point charge (+0.403 au), a negative point charge (-0.909 au) representing hydrogen atom and chlorine atom respectively and a third positive point charge (+0.506 au) located in a direction opposite the hydrogen atom and 1 au away from the chlorine atom. The values of the parameters $C_{6}$ in the dispersion term, and $a_{i,j}$ and $b_{i,j}$ in repulsion term to describe the surface interaction potential between HCl on ice were taken from \citep{woittequand2007classical}. The value of the $D(r_{w_{i},j})$ was obtained by applying the damping function equation \citep{kroes1992sticking}.
+
+Scalar relativistic (SR) zero-order regular approximation (ZORA) Hamiltonian contain relativistic effects such as spin orbit coupling. It has been shown that, the potential dependent expansion in the ZORA gives a second order differential equation that is variationally stable and is able to provide accurate electron energies and densities of the valence orbitals in self-consistent all-electron and frozen-core calculations \citep{lenthe1993relativistic}.
+
+According to \citep{van2003optimized}, electron basis sets with triple-zeta quality with two polarization (TZ2P) functions added and quadruple-zeta valence quality with four polarization added (QZ4P) can provide accurate orbital energies for chloride anion with reduced error compared to double-zeta (DZ) basis sets. It was suggested that the use of TZ2P and QZ4P in ZORA gives orbital energies that is accurate with less error compared to the use of the fully relativistic Dirac equation.
+
+PBE density functinal \citep{perdew1996generalized} gives accurate description of the linear response of spin-unpolarized uniform electron gas due its ability to incorporate inhomogeneity effects in the density. In this respect, it is able to predict accurately the correct behavior under uniform scaling, smoother potential potential and atomization of energies of moleucles.  
+
+Uncontracted augmented triple-zeta basis set with only two correlating d functions is able to describe the spin-orbit splitting of the 2p orbital in chloride at the Dirac-Hartree-Fock level \citep{dyall2016relativistic}.
+
+\section{Discussion on the potential model}
+We now discuss the potential energy surface (PES) derived from the classical force fields. At shorter distances for HCl interaction with water molecules on ice, the dispersion potential contribution to the total interaction energy tend to decrease to interatomic distance around 9{{\AA}}. For the repulsive potential contribution, it increase to around 7{{\AA}}. In both cases, a constant trajectory is observed for large intermolecular distances at energies around -0.183 eV and 0.00030 eV for the dispersive and repulsive part respectively. The electrostatic potential on the other hand decreased in energy at shorter interatomic distances to a minimum of -0.295 eV around 10{{\AA}} and then converges to a constant path at larger distances. From figure ~\ref{figure12}, it can be seen that at large intermolecular distance, the effect of the adsorption on the water molecules on ice is less pronounced and have negligible effect on the total interaction energy due to weak interaction between them. The interaction energy curve derived from the electrostatic as depicted in ~\ref{figure6} appears to be similar to the total interaction energy curve in ~\ref{figure12}. For this reason, we can suggest that the adsorption of HCl on ice surface gives a total interaction energy that evolves mainly from the electrostatic part of the force field and that contribution from the dispersion and repulsion potential play a minor role in the interaction energy of the molecular system of interest.
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{angs_energy.png}
+\caption{Various potential energy contribution to the total interaction energy of HCl adsorption ice surface.}
+\label{figure6}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nowat_energy.png}
+\caption{Total interaction energy of HCl on the surface of ice and the change in the total interaction energy as a function of the variation in the number of water molecules.}
+\label{figure12}
+\end{figure}
+
+
+\section{Results of comparison between SAOP and PBE}
+To evaluate our computational approach, it was essential to compare the effects of water molecules on the halogen of the adsorption of  the HCl molecule on ice surface with different functionals. To attain this, we analyzed the orbital energy of our molecular system with the SAOP model and PBE functional. Based on the calcultion, it was observed that the GGA's provide inaccurate orbital energy of the highest occupied molecular orbital (HOMO) as the number of water molecules. The PBE functional gave values for the HOMO energy that were either spurious or too high compared to those of the SAOP model as shown in table ~\ref{table1}. This attest to the fact that GGA`s do not have the right asymptotic behavior to reduce self interaction errors as increase in the number of molecules occurs and can compromise the ionization potential. From figure ~\ref{figure0}, it can be seen the PBE functional has problem with charge transfer due its deficiency to account for integral discontinuity in the total energy for large system. The SAOP model on the other hand proved to be an excellent approximation to compute the HOMO orbital energies and can predict the ionization energy of the molecular system of interest accurately based on the dependence of the HOMO energy on the ionization potential in the Koopmann's theorem. By comparing both models, we can suggest that the significant number charges allocated to the halogen in the SAOP  model and its asymptotic behavior makes the highest occupied molecular orbital (HOMO) more localized and tightly bound compared to the PBE model as the solvent system icreases. 
+
+\begin{figure}[H]\large
+\includegraphics[width = 10.0cm, trim = -10cm 0cm 35cm 0cm]{combfunc1.png}
+\caption{Localization of the HOMO of solvated chloride ion using different exchange correlation models.}
+\label{figure0}
+\end{figure}
+
+
+\begin{table}[H]\small
+\begin{center}
+\caption{Comparison of the orbital energies for SAOP and PBE as a function of variation of in the number of water molecules of Chloride ion adsorption on ice surface} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&HOMO energies (eV)&LUMO energies (eV)\\
+&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)\\ 
+\hline
+$Cl^{-}$&\hspace*{1.0cm}-3.27&\hspace*{1.0cm}8.84\\
+\hline
+$[Cl(H_{2}O)_{1}]^{-1}$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-2.37\\
+\hline
+$[Cl(H_{2}O)_{50}]^{-1}$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-3.65\\
+\hline
+$[Cl(H_{2}O)_{100}]^{-1}$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.46\\
+\hline
+$[Cl(H_{2}O)_{150}]^{-1}$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.35\\
+\hline
+$[Cl(H_{2}O)_{200}]^{-1}$&\hspace*{1.0cm}-3.07&\hspace*{1.0cm}-2.61\\
+\hline
+\end{tabular}
+\label{table1}
+\end{center}
+\end{table}
+
+
+
+
+
+\section{Results of the impact of Cl ion on ice surface}
+Density of state (DOS) is useful to investigate the differences in the dynamics of the same kind of molecules. Figure ~\ref{figure1a} (a) and (b) depicts the DOS of chloride ion and solvated chloride ion respectively. The band close to -0.12 au (-3.3 eV) on both figures corresponds to the HOMO of the chloride ion. It can be seen that there is clear difference between the two spectrum. For the solvated chloride ion, the peaks seem to become broader compared to that of the unsolvated chloride ion. This is an indication that the quasi-liquid layer (QLL) on ice surface influences the ionic chloride. We must say that the total DOS changes drastically as the number of water molecules interacting with ionic chloride increases, however, the HOMO energies seem to remain almost the same. This is an indication that only few water molecules on ice surface is required to perturb the chloride and bind them into solvation. Thus, increase in the number of water molceules does lead to significat changes in the the orbital energies of HCl adsorption on ice surface as shown in figure ~\ref{figure1a} and ~\ref{figure2a}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb50.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with SAOP model (50 water molecules).}
+\label{figure1a}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb100.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with SAOP model (100 water molecules).}
+\label{figure2a}
+\end{figure}
+
+
+
+\begin{table}[H]\tiny
+\begin{center}
+\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{50}$} \label{tab:5}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+$[Cl(H_{2}O)_{50}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{30}]$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$\\
+\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm} CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+\hline
+\hspace*{0.5cm}-3.24&\hspace*{0.5cm}-2.97&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.03&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\end{tabular}
+\label{table5}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]\tiny
+\begin{center}
+\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{100}$ } \label{tab:6}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+$[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{80}]$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$\\
+\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+\hline
+\hspace*{0.5cm}-3.13&\hspace*{0.5cm}-2.73&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+\hline
+\end{tabular}
+\label{table6}
+\end{center}
+\end{table}
+
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallbar.png}
+\caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
+\label{figure45}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallline.png}
+\caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
+\label{figure46}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{renocom.png}
+\caption{Effect of ice on chloride ion for 50 water molecules using different FDE approaches.}
+\label{figure47}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{sns.png}
+\caption{comaprison between the supermolecules of the effect the quasi-liquid layer on ice on chloride anion for 50 and 100 water molecules.}
+\label{figure48}
+\end{figure}
+
+
+
+%\begin{table}[H]\small
+%\begin{center}
+%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{200}$ } \label{tab:7}
+%\begin{tabular}{|l|l|l|l|l|l|}
+%\hline
+%$[Cl(H_{2}O)_{200}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$\\
+%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&%\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+%\hline
+%\hspace*{0.5cm}-3.07&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\end{tabular}
+%\label{table7}
+%\end{center}
+%\end{table}
+
+
+
+\section{Appendix}
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb50.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (50 water molecules).}
+\label{figure1b}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb100.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (100 water molecules).}
+\label{figure2b}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb150.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (150 water molecules).}
+\label{figure3b}
+\end{figure}
+
+\begin{figure}[H]\large
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb200.png}
+\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (200 water molecules).}
+\label{figure4b}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\bibliography{con.bib}
+\bibliographystyle{apalike}
+\end{document}
+
