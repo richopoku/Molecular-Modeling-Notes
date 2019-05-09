@@ -1,58 +1,210 @@
-coords   = os.path.join (pyadfenv.outdir, 'coordinates.xyz')
+import glob
 
-snap = molecule(coords)
-allmol = snap.separate()
+def cl_wat_loc(Smol, cl_key, wat_key):
+    fragments = Smol.separate()
+    print"cl_wat_locator: ..."
 
+    cl = molecule()
+    water_list = []
+    clfrag_no  = 0
+    watfrag_no = 0
+    false_frag_counter = 0
+
+    cl_values = cl_key.values()
+    wat_values = wat_key.values()
+    clatom_no = sum(i for i in cl_values)
+    watatom_no = sum(i for i in wat_values)
+
+    for f in fragments :
+        frag = f
+        no_of_atoms = frag.get_number_of_atoms()
+
+        if no_of_atoms == clatom_no :
+
+            atom_symbols = frag.get_atom_symbols()
+            cl_count={}.fromkeys(set(atom_symbols),0)
+            for symbol in atom_symbols:
+                cl_count[symbol]+=1
+            if cmp(cl_count, cl_key) ==0 :
+                clfrag_no +=1
+                cl = cl + frag
+            else :
+                false_frag_counter +=1
+                print "Warning",False_fragment_Counter,"Unexpected Fragment found"
+                print "Strange Fragments Coordinates :\n",frag.print_coordinates()
+
+
+        elif no_of_atoms == watatom_no :
+
+            atom_symbols = frag.get_atom_symbols()
+            wat_count={}.fromkeys(set(atom_symbols),0)
+            for symbol in atom_symbols:
+                wat_count[symbol]+=1
+            if cmp(wat_count, wat_key) ==0 :
+                watfrag_no +=1
+                water_list.append(frag)
+            else :
+                false_frag_counter +=1
+                print "Warning",False_fragment_Counter,"Unexpected Fragment found"
+                print "Strange Fragments Coordinates :\n",frag.print_coordinates()
+
+        else :
+            false_frag_counter +=1
+            print "Warning",False_fragment_Counter,"Unexpected Fragment found"
+            print "Strange Fragments Coordinates :\n",frag.print_coordinates()
+
+    print "The Number of Atoms in each solute fragment is = ", clatom_no, "and the Number of Atoms in each solvent fragment is", watatom_no
+    print "The number of Solute fragments in this case =  ", clfrag_no
+    print "the number of VALID solvent fragments in this case = ", watfrag_no
+    return (cl, water_list)
+
+
+def activesystem_area(cl, water_list, Add_no1 = None,Add_no2 = None,Add_no3 = None, radius = None, PPoint= None):
+    print"      activesystem_area : ..."
+
+
+    activesystem  = cl
+    FnT =[]
+    FDE = []
+    FDESP = []
+    cl_wat_dist = []
+
+    if Add_no1 == radius :
+        print "ERROR : cannot have Add_no == radius) "
+        quit()
+    if radius is not None :
+
+        if PPoint is not None:
+            print "Distance calculated relative to a particular point"
+            print "The referent point", PPoint
+            for frag in  water_list :
+                 cl_wat_dist.append(frag.distance_to_point(PPoint, ghosts=True))
+
+        else :
+            print "Distance calculated relative to the COM"
+            Point = cl.get_center_of_mass()
+            for frag in  water_list :
+                cl_wat_dist.append(frag.distance_to_point(Point, ghosts=True))
+            print "Center of masses :", Point
+
+        Len = len(cl_wat_dist)
+        for i in range(0,Len):
+
+            if cl_wat_dist[i]<radius[0] :
+                activesystem = activesystem + water_list[i]
+
+            elif cl_wat_dist[i]<radius[10] :
+                FnT.append(water_list[i])
+
+            elif cl-wat_dist[i]>radius[10] :
+                FDE.append(water_list[i])
+
+            else :
+                FDESP.append(water_list[i])
+    else :
+        print "The minimum  distances between atoms"
+        for frag in  water_list :
+            cl_wat_dist.append(cl.distance(frag))
+
+        while  Add_no1 :
+            minimum = min(cl_wat_dist)
+            Indice = cl_wat_dist.index(minimum)
+
+            activesystem = activesystem + water_list[Indice]
+            water_list.remove(water_list[Indice])
+            cl_wat_dist.remove(cl_wat_dist[Indice])
+
+            Add_no1 -=1
+
+        while  Add_no2 :
+            minimum = min(cl_wat_dist)
+            Indice = cl_wat_dist.index(minimum)
+
+            FnT.append(water_list[Indice])
+            water_list.remove(water_list[Indice])
+            cl_wat_dist.remove(cl_wat_dist[Indice])
+
+            Add_no2 -=1
+
+        while  Add_no3 :
+            minimum = min(cl_wat_dist)
+            Indice = cl_wat_dist.index(minimum)
+
+            FDE.append(water_list[Indice])
+            water_list.remove(water_list[Indice])
+            cl_wat_dist.remove(cl_wat_dist[Indice])
+
+            Add_no3 -=1
+
+
+        while len(cl_wat_dist) :
+            minimum = min(cl_wat_dist)
+            Indice = cl_wat_dist.index(minimum)
+
+            FDESP.append(water_list[Indice])
+            water_list.remove(water_list[Indice])
+            cl_wat_dist.remove(cl_wat_dist[Indice])
+
+    print "cl_water Distances :", cl_wat_dist
+    return (activesystem, FnT, FDE, FDESP )
 
 
 settings = adfsettings()
-settings.set_ZORA(True)
+settings.set_save_tapes([21,10])
+settings.set_printing(True)
+settings.set_integration(accint=6.0)
+settings.set_ZORA(ZORA=True)
 settings.set_functional('SAOP')
-settings.set_save_tapes([21, 10])
-settings.set_integration (accint=4.0)
-settings.set_ncycles(500)
+settings.set_ncycles(1000)
 myfiles.set_outputfilename("results")
 
 
-FnT_Job_opts = {'FULLGRID' : '',  'GGAPOTXFD':  'PBEX', 'GGAPOTCFD':  'PBEC', 'PW91k' : '', 'RELAXCYCLES' : 10}
+Active_basis = 'TZ2P'
+FnT_basis   = 'TZ2P'
+FDE_basis   = 'DZP'
+FDESP_basis = 'DZP'
 
 
+basic_options = ['TOTALENERGY', 'NOSYMFIT', 'NOSYM', 'ALLOW POSHOMO']
+FnT_Job_opts = { 'GGAPOTXFD' : 'PBEX', 'GGAPOTCFD' : 'PBEC', 'PW91k':'', 'RELAXCYCLES': 10 }
+FnT_relax_opts = { "RELAX" : "" }
 
-Frags = []
+AS=0
+FnTS=50
+FDES=200
 
-m_cl = allmol[0:11]
-m_cl[0].set_charge(-1)
-print m_cl
+coords = os.path.join("coordinates.xyz")
+print coords
 
-for m_cl in m_cl :
-     print m_cl
-    #m_cl.set_charge(-1)
-     m_cl.set_spin(0)
-     Frags.append(fragment(None,  m_cl ))
+Smol = molecule(coords)
 
-h2oten = allmol[11:21]
-print h2oten
-for ten in h2oten :
-     print ten
-     ten.set_charge(0)
-     ten.set_spin(0)
+(cl,water_list)=cl_wat_loc(Smol, wat_key= {'O':1,'H':2}, cl_key= {'Cl':1} )
+(activesystem, FnT, FDE, FDESP ) = activesystem_area(cl, water_list,Add_no1=AS,Add_no2=FnTS,Add_no3=FDES)
 
-     # Prepare 10 water molecules relax
-     r_h2o_ten = adfsinglepointjob( ten, 'SZ', options=['NOSYMFIT', 'NOSYM'], settings=settings).run()
-     Frags.append(fragment(r_h2o_ten, ten, isfrozen=True, fdeoptions={"RELAX":""}))
+print "Active System :", activesystem
 
+activesystem.set_charge(-1)
+frags = [fragment(None, activeystem)]
 
-h2o = allmol[21:]
-print h2o
-for f in h2o :
-     print f
-     f.set_charge(0)
-     f.set_spin(0)
+FnT_molecule = molecule()
 
-   # Prepare rest of water molecule frozen
-     r_h2o_1 = adfsinglepointjob( f, 'SZ', options=['NOSYMFIT', 'NOSYM'], settings=settings).run()
-     Frags.append(fragment(r_h2o_1, f, isfrozen=True))
+for f in FnT:
+   f.set_charge(0)
+   f.set_spin(0)
+   FnT_molecule += f
+print FnT_molecule
+
+#FnT_relax = adfsinglepointjob(FnT_molecule, FnT_basis, options=basic_options, settings=settings).run()
+#frags.append(fragment(FnT_relax, FnT_molecule, isfrozen=True, fdeoptions=FnT_relax_opts))
+
+for f in FDE:
+   f.set_charge(0)
+   f.set_spin(0)
+   print f
+   #FDE_frozen = adfsinglepointjob(f, FDE_basis, options=basic_options, settings=settings).run()
+  # frags.append(fragment(FDE_frozen, f, isfrozen=True))
 
 
-fde_res = adffragmentsjob( Frags, basis="TZ2P", settings=settings, options=['NOSYMFIT', 'NOSYM'], fde=FnT_Job_opts).run()
+#fde_results = adffragmentsjob(frags, Active_basis, settings=settings, fde=FnT_Job_opts,options=basic_options).run()
+
 
