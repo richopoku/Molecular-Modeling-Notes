@@ -171,28 +171,60 @@ To evaluate our computational approach, it was essential to compare the effects 
 
 \begin{table}[H]\small
 \begin{center}
-\caption{Comparison of the orbital energies for SAOP and PBE as a function of variation of in the number of water molecules of Chloride ion adsorption on ice surface} \label{tab:1}
-\begin{tabular}{|l|l|l|l|l|}
+\caption{Binding energies of the P state of partially solvated chloride from ZORA SAOP scalar relativistic calculations on the embedded chloride with triple-zeta basis sets and quadruple-zeta basis sets} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline
-&HOMO energies (eV)&LUMO energies (eV)\\
-&\hspace*{1.0cm}(SAOP)&\hspace*{1.0cm}(SAOP)\\ 
+&HOMO energies (eV)&HOMO energies (eV)&HOMO energies (eV)\\
+&\hspace*{0.5cm}SAOP (TZ2P)&\hspace*{0.5cm}SAOP (QZ4P)&\hspace*{0.5cm}Supermolecule\\ 
 \hline
-$Cl^{-}$&\hspace*{1.0cm}-3.27&\hspace*{1.0cm}8.84\\
+$Cl^{-}$&\hspace*{1.0cm}3.27&\hspace*{1.0cm}3.31&\\
 \hline
-$[Cl(H_{2}O)_{1}]^{-1}$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-2.37\\
+$[Cl(H_{2}O)_{50}]^{-1}$&\hspace*{1.0cm}3.73&\hspace*{1.0cm}3.73&\hspace*{1.0cm}4.09\\
 \hline
-$[Cl(H_{2}O)_{50}]^{-1}$&\hspace*{1.0cm}-3.24&\hspace*{1.0cm}-3.65\\
-\hline
-$[Cl(H_{2}O)_{100}]^{-1}$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.46\\
-\hline
-$[Cl(H_{2}O)_{150}]^{-1}$&\hspace*{1.0cm}-3.13&\hspace*{1.0cm}-3.35\\
-\hline
-$[Cl(H_{2}O)_{200}]^{-1}$&\hspace*{1.0cm}-3.07&\hspace*{1.0cm}-2.61\\
+$[Cl(H_{2}O)_{100}]^{-1}$&\hspace*{1.0cm}3.83&\hspace*{1.0cm}3.84&\hspace*{1.0cm}4.21\\
 \hline
 \end{tabular}
 \label{table1}
 \end{center}
 \end{table}
+
+
+\begin{table}[H]\small
+\begin{center}
+\caption{Binding energies of the P state of partially solvated chloride from DC SAOP and DC CV-EOM-IP-CCSD calculations on the embedded chloride with triple-zeta basis sets} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+&Chloride ($2P_{\frac{3}{2}}$)&Chloride ($2P_{\frac{1}{2}}$)&Chloride ($2P_{\frac{3}{2}}$)&Chloride ($2P_{\frac{1}{2}}$)&Water ($1b_{1}$)&Water ($3a_{1}$)\\
+&\hspace*{0.5cm} DC SAOP &\hspace*{0.5cm} DC SAOP&DC EOM&DC EOM&\hspace*{0.5cm}VBM &\hspace*{0.5cm}VBM\\ 
+\hline
+$[Cl(H_{2}O)_{50}]^{-1}$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.8\\
+\hline
+$[Cl(H_{2}O)_{100}]^{-1}$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.5&\hspace*{0.5cm}14.0\\
+\hline
+\end{tabular}
+\label{table1m}
+\end{center}
+\end{table}
+
+\begin{table}[H]\small
+\begin{center}
+\caption{Experimental binding energies of the P state of partially solvated chloride and the valence band maximum of ice} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+&Chloride ($2p_{\frac{3}{2}}$)&Chloride ($2p_{\frac{1}{2}}$)&Water ($1b_{1}$)&Water ($3a_{1}$)\\
+&\hspace*{0.5cm} DC SAOP &\hspace*{0.5cm} DC SAOP &\hspace*{0.5cm}VBM &\hspace*{0.5cm}VBM\\ 
+\hline
+$[Cl(H_{2}O)_{1}]^{-1}$&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}12.3 (a)&\hspace*{0.5cm}14.2 (a)\\
+&&&\hspace*{0.5cm}11.8 (b)&\\
+\hline
+$[Cl(H_{2}O)_{2}]^{-1}$&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+&&&&\\
+\hline
+\end{tabular}
+\label{table1n}
+\end{center}
+\end{table}
+
 
 
 
@@ -201,105 +233,88 @@ $[Cl(H_{2}O)_{200}]^{-1}$&\hspace*{1.0cm}-3.07&\hspace*{1.0cm}-2.61\\
 \section{Results of the impact of Cl ion on ice surface}
 Density of state (DOS) is useful to investigate the differences in the dynamics of the same kind of molecules. Figure ~\ref{figure1a} (a) and (b) depicts the DOS of chloride ion and solvated chloride ion respectively. The band close to -0.12 au (-3.3 eV) on both figures corresponds to the HOMO of the chloride ion. It can be seen that there is clear difference between the two spectrum. For the solvated chloride ion, the peaks seem to become broader compared to that of the unsolvated chloride ion. This is an indication that the quasi-liquid layer (QLL) on ice surface influences the ionic chloride. We must say that the total DOS changes drastically as the number of water molecules interacting with ionic chloride increases, however, the HOMO energies seem to remain almost the same. This is an indication that only few water molecules on ice surface is required to perturb the chloride and bind them into solvation. Thus, increase in the number of water molceules does lead to significat changes in the the orbital energies of HCl adsorption on ice surface as shown in figure ~\ref{figure1a} and ~\ref{figure2a}
 
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb50.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with SAOP model (50 water molecules).}
-\label{figure1a}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLSAOP_comb100.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with SAOP model (100 water molecules).}
-\label{figure2a}
-\end{figure}
 
 
+%\begin{table}[H]\tiny
+%\begin{center}
+%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{50}$} \label{tab:5}
+%\begin{tabular}{|l|l|l|l|l|l|l|}
+%\hline
+%$[Cl(H_{2}O)_{50}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{30}]$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$\\
+%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm} CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+%\hline
+%\hspace*{0.5cm}-3.24&\hspace*{0.5cm}-2.97&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.03&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\end{tabular}
+%\label{table5}
+%\end{center}
+%\end{table}
 
-\begin{table}[H]\tiny
-\begin{center}
-\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{50}$} \label{tab:5}
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-$[Cl(H_{2}O)_{50}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{30}]$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$\\
-\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm} CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
-\hline
-\hspace*{0.5cm}-3.24&\hspace*{0.5cm}-2.97&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.03&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\end{tabular}
-\label{table5}
-\end{center}
-\end{table}
 
-
-\begin{table}[H]\tiny
-\begin{center}
-\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{100}$ } \label{tab:6}
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-$[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{80}]$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$\\
-\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
-\hline
-\hspace*{0.5cm}-3.13&\hspace*{0.5cm}-2.73&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-\hline
-\end{tabular}
-\label{table6}
-\end{center}
-\end{table}
+%\begin{table}[H]\tiny
+%\begin{center}
+%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{100}$ } \label{tab:6}
+%\begin{tabular}{|l|l|l|l|l|l|l|}
+%\hline
+%$[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{80}]$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$\\
+%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
+%\hline
+%\hspace*{0.5cm}-3.13&\hspace*{0.5cm}-2.73&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
+%\hline
+%\end{tabular}
+%\label{table6}
+%\end{center}
+%\end{table}
 
 
 \begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallbar.png}
+\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{newfig50-100bar_edit.png}
 \caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
 \label{figure45}
 \end{figure}
 
 \begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{nodyallline.png}
-\caption{Effect of ice surface on chloride ion for 50 and 100 water molecules.}
+\includegraphics[width = 5.0cm, trim = 0cm 0cm 10cm 0cm]{imagefnt50-40-0-10d_edit2.png}
+\caption{}
 \label{figure46}
 \end{figure}
 
 \begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{renocom.png}
+\includegraphics[width = 9.0cm, trim = 0cm 0cm 10cm 0cm]{imagefnt100-90-0-10d_edit2.png}
 \caption{Effect of ice on chloride ion for 50 water molecules using different FDE approaches.}
 \label{figure47}
 \end{figure}
 
-\begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{sns.png}
-\caption{comaprison between the supermolecules of the effect the quasi-liquid layer on ice on chloride anion for 50 and 100 water molecules.}
-\label{figure48}
-\end{figure}
 
 
 
@@ -361,29 +376,7 @@ $[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{
 
 
 \section{Appendix}
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb50.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (50 water molecules).}
-\label{figure1b}
-\end{figure}
 
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb100.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (100 water molecules).}
-\label{figure2b}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb150.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (150 water molecules).}
-\label{figure3b}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{DOSCLPBE_comb200.png}
-\caption{Density of states of the impact of the outermost layer of ice on chloride ion with PBE functional (200 water molecules).}
-\label{figure4b}
-\end{figure}
 
 
 
