@@ -129,32 +129,9 @@ Uncontracted augmented triple-zeta basis set with only two correlating d functio
 We now discuss the potential energy surface (PES) derived from the classical force fields. At shorter distances for HCl interaction with water molecules on ice, the dispersion potential contribution to the total interaction energy tend to decrease to interatomic distance around 9{{\AA}}. For the repulsive potential contribution, it increase to around 7{{\AA}}. In both cases, a constant trajectory is observed for large intermolecular distances at energies around -0.183 eV and 0.00030 eV for the dispersive and repulsive part respectively. The electrostatic potential on the other hand decreased in energy at shorter interatomic distances to a minimum of -0.295 eV around 10{{\AA}} and then converges to a constant path at larger distances. From figure ~\ref{figure12}, it can be seen that at large intermolecular distance, the effect of the adsorption on the water molecules on ice is less pronounced and have negligible effect on the total interaction energy due to weak interaction between them. The interaction energy curve derived from the electrostatic as depicted in ~\ref{figure6} appears to be similar to the total interaction energy curve in ~\ref{figure12}. For this reason, we can suggest that the adsorption of HCl on ice surface gives a total interaction energy that evolves mainly from the electrostatic part of the force field and that contribution from the dispersion and repulsion potential play a minor role in the interaction energy of the molecular system of interest.
 
 \begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{angs_energy.png}
-\caption{Various potential contribution to the total interaction energy of HCl adsorption ice surface.}
-\label{figure6}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn50un.png}
-\caption{Total interaction potential of HCl on the surface of ice for 50 water molecules.}
-\label{figure12}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn100.png}
-\caption{Total interaction potential of HCl on the surface of ice for 100 water molecules.}
-\label{figure101}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 10.0cm, trim = 0cm 0cm 10cm 0cm]{enn200.png}
-\caption{Total interaction potential of HCl on the surface of ice for 200 water molecules.}
-\label{figure102}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 17.0cm, trim = 0cm 0cm 10cm 0cm]{potent_total.png}
-\caption{Comparison of the total interaction potential of HCl on ice surface.}
+\captionsetup{font=footnotesize}
+\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{potent_total.png}
+\caption{Variation of the total interaction potential (in eV) for Chloride ion partially solvated in the liquid-like layer on ice surface as a function of water cluster size.}
 \label{figure103}
 \end{figure}
 
@@ -169,41 +146,68 @@ To evaluate our computational approach, it was essential to compare the effects 
 \end{figure}
 
 
-\begin{table}[H]\small
-\begin{center}
-\caption{Binding energies of the P state of partially solvated chloride from ZORA SAOP scalar relativistic calculations on the embedded chloride with triple-zeta basis sets and quadruple-zeta basis sets} \label{tab:1}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-&HOMO energies (eV)&HOMO energies (eV)&HOMO energies (eV)\\
-&\hspace*{0.5cm}FDE (TZ2P)&\hspace*{0.5cm}FDE (QZ4P)&\hspace*{0.3cm}Supermolecule (TZ2P)\\ 
-\hline
-$Cl^{-}$&\hspace*{1.0cm}3.27&\hspace*{1.0cm}3.31&\\
-\hline
-$[Cl^{-1}(H_{2}O)_{6}]$&\hspace*{1.0cm}3.40&\hspace*{1.0cm}3.59&\hspace*{1.0cm}3.87\\
-\hline
-$[Cl^{-1}(H_{2}O)_{50}]$&\hspace*{1.0cm}3.73&\hspace*{1.0cm}3.73&\hspace*{1.0cm}4.09\\
-\hline
-$[Cl^{-1}(H_{2}O)_{100}]$&\hspace*{1.0cm}3.83&\hspace*{1.0cm}3.84&\hspace*{1.0cm}4.21\\
-\hline
-\end{tabular}
-\label{table1}
-\end{center}
-\end{table}
+
+\section{Influence of the water cluster size on the solvated chloride ion: Scalar relativistic effect}
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 11.5cm, trim = 0cm 0cm 10cm 0cm]{AllnospinM.png}
+\caption{Average electron binding energies spectra (in eV) for $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various cluster size obtained with SR-ZORA SAOP using quadruple-zeta basis sets}
+\label{figure47}
+\end{figure}
 
 
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 12.3cm, trim = 0cm 0cm 10cm 0cm]{AllnospinR.png}
+\caption{Average electron binding energies spectra (in eV) for $[Cl^{-1}/(H_{2}O)_{n}]$ for various water cluster size obtained with SR-ZORA SAOP using TZ2P and QZ4P}
+\label{figure53}
+\end{figure}
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 10.8cm, trim = 0cm 0cm 10cm 0cm]{AllnospinW.png}
+\caption{Average electron binding energies spectra (in eV) for $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various cluster size using the SR-ZORA SAOP using TZ2P and QZ4P}
+\label{figure54}
+\end{figure}
+
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 8.0cm, trim = 0cm 0cm 10cm 0cm]{zrelaxed_edit.png}
+\caption{Variation of the binding energies (in eV) for partially solvated chloride ion for different water cluster size on ice surface with respect to the number of water molecules relaxed in the cluster using the SR-ZORA SAOP in the DFT-in-DFT approach}
+\label{figure45}
+\end{figure}
+
+
+\section{Influence of the water cluster size on the solvated chloride ion: Effect of Spin-Orbit Coupling}
+
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 12.3cm, trim = 0cm 0cm 10cm 0cm]{AllspinM.png}
+\caption{Average electron binding energies spectra (in eV) for $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various water cluster size obtained with DC-ZORA SAOP using QZ4P (figure ~\ref{figure48} (a), (b), (c) and (f)) and with DC CVS-EOM-IP-CCSD (figure ~\ref{figure48} (d) and (e)) using TZ2P}
+\label{figure48}
+\end{figure}
+
 \begin{table}[H]\small
 \begin{center}
-\caption{Binding energies of the P state of partially solvated chloride from DC SAOP and DC CV-EOM-IP-CCSD calculations on the embedded chloride with triple-zeta basis sets} \label{tab:1}
+\captionsetup{font=footnotesize}
+\caption{Average binding energies (in eV) for the spin-orbit coupling effect of the P states of embedded chloride ion on different water cluster size with DC-ZORA SAOP and DC CVS-EOM-IP-CCSD calculations using triple-zeta basis sets} \label{tab:1}
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-&Chloride ($2P_{\frac{3}{2}}$)&Chloride ($2P_{\frac{1}{2}}$)&Chloride ($2P_{\frac{3}{2}}$)&Chloride ($2P_{\frac{1}{2}}$)&Water ($1b_{1}$)&Water ($3a_{1}$)\\
-&\hspace*{0.5cm} DC SAOP &\hspace*{0.5cm} DC SAOP&DC EOM&DC EOM&\hspace*{0.5cm}VBM &\hspace*{0.5cm}VBM\\ 
+&$Cl^{-}$ ($2P_{\frac{3}{2}}$)&$Cl^{-}$ ($2P_{\frac{1}{2}}$)&$Cl^{-}$ ($2P_{\frac{3}{2}}$)&$Cl^{-}$ ($2P_{\frac{1}{2}}$)&Ice ($1b_{1}$)&Ice ($3a_{1}$)\\
+&SAOP &SAOP&EOM&EOM&\hspace*{0.3cm}VBM &\hspace*{0.3cm}VBM\\ 
 \hline
-$[Cl^{-1}(H_{2}O)_{6}]$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.7\\
+$Cl^{-1}/(H_{2}O)_{6}$&\hspace*{0.5cm}3.4&\hspace*{0.5cm}5.8&\hspace*{0.5cm}3.7&\hspace*{0.5cm}6.0&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.4\\
 \hline
-$[Cl^{-1}(H_{2}O)_{50}]$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.8\\
+$Cl^{-1}/(H_{2}O)_{50}$&\hspace*{0.5cm}3.7&\hspace*{0.5cm}6.2&\hspace*{0.5cm}3.9&\hspace*{0.5cm}6.3&\hspace*{0.5cm}11.5&\hspace*{0.5cm}13.5\\
 \hline
-$[Cl^{-1}(H_{2}O)_{100}]$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.5&\hspace*{0.5cm}14.0\\
+$Cl^{-1}/(H_{2}O)_{100}$&\hspace*{0.5cm}3.9&\hspace*{0.5cm}6.4&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.6&\hspace*{0.5cm}13.6\\
+\hline
+$(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{40}$&\hspace*{0.5cm}3.8&\hspace*{0.5cm}6.4&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.4\\
+\hline
+$(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{90}$&\hspace*{0.5cm}4.0&\hspace*{0.5cm}6.6&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.5&\hspace*{0.5cm}13.5\\
 \hline
 \end{tabular}
 \label{table1m}
@@ -212,26 +216,22 @@ $[Cl^{-1}(H_{2}O)_{100}]$&\hspace*{0.5cm}&\hspace*{0.5cm}&&&\hspace*{0.5cm}11.5&
 
 \begin{table}[H]\small
 \begin{center}
-\caption{Experimental binding energies of the valence band maximum (VBM) of ice, partially solvated chloride anion and the shift in the 2P state of the solvated chloride ion} \label{tab:1}
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\captionsetup{font=footnotesize}
+\caption{Average binding energies (in eV) for the spin-orbit coupling effect of the P states of embedded chloride ion on different water cluster size with DC-ZORA SAOP and DC CVS-EOM-IP-CCSD calculations using quadruple-zeta basis sets} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-&Solvated chloride anion &\hspace*{0.4cm}VBM&\hspace*{0.4cm}VBM&\hspace*{0.2cm}Chemical shift\\
-&\hspace*{0.6cm}(Pure liquid)&\hspace*{0.5cm}$1b_{1}$&\hspace*{0.5cm}$3a_{1}$&\hspace*{0.5cm}2P doublet\\ 
+&$Cl^{-}$ ($2P_{\frac{3}{2}}$)&$Cl^{-}$ ($2P_{\frac{1}{2}}$)&$Cl^{-}$ ($2P_{\frac{3}{2}}$)&$Cl^{-}$ ($2P_{\frac{1}{2}}$)&Ice ($1b_{1}$)&Ice ($3a_{1}$)\\
+&SAOP &SAOP&EOM&EOM&\hspace*{0.3cm}VBM &\hspace*{0.3cm}VBM\\ 
 \hline
-Ice&\hspace*{0.4cm}&\hspace*{0.4cm}12.3 (a)&\hspace*{0.4cm}14.2 (a)&\hspace*{0.4cm}\\
-&&\hspace*{0.4cm}11.8 (b)&&\\
+$Cl^{-1}/(H_{2}O)_{6}$&\hspace*{0.5cm}3.6&\hspace*{0.5cm}5.9&\hspace*{0.5cm}3.8&\hspace*{0.5cm}6.1&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.4\\
 \hline
-$Cl^{-1}(H_{2}O)$&\hspace*{0.4cm}&\hspace*{0.4cm}&\hspace*{0.4cm}&\hspace*{0.4cm}2.2 (d)\\
-&&\hspace*{0.4cm}&&\hspace*{0.4cm}1.3 (e)\\
+$Cl^{-1}/(H_{2}O)_{50}$&\hspace*{0.5cm}3.8&\hspace*{0.5cm}6.2&\hspace*{0.5cm}4.0&\hspace*{0.5cm}6.4&\hspace*{0.5cm}11.5&\hspace*{0.5cm}13.5\\
 \hline
-$Cl^{-1}(H_{2}O)_{4}$&\hspace*{0.7cm}5.92 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
-&&\hspace*{0.4cm}&&\\
+$Cl^{-1}/(H_{2}O)_{100}$&\hspace*{0.5cm}4.0&\hspace*{0.5cm}6.4&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.6&\hspace*{0.5cm}13.6\\
 \hline
-$Cl^{-1}(H_{2}O)_{5}$&\hspace*{0.7cm}6.21 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
-&&\hspace*{0.4cm}&&\\
+$(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{40}$&\hspace*{0.5cm}3.9&\hspace*{0.5cm}6.4&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.4&\hspace*{0.5cm}13.4\\
 \hline
-$Cl^{-1}(H_{2}O)_{6}$&\hspace*{0.7cm}6.58 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
-&&\hspace*{0.4cm}&&\\
+$(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{90}$&\hspace*{0.5cm}4.1&\hspace*{0.5cm}6.6&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}11.5&\hspace*{0.5cm}13.5\\
 \hline
 \end{tabular}
 \label{table1n}
@@ -239,194 +239,79 @@ $Cl^{-1}(H_{2}O)_{6}$&\hspace*{0.7cm}6.58 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
 \end{table}
 
 
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 6.7cm, trim = 0cm 0cm 10cm 0cm]{zbinding_edit.png}
+\caption{Computed binding energies shift (in eV) for the spin-orbit coupling effect of the P states of chloride ion embedded in different water cluster size with DC-ZORA SAOP and DC CVS-EOM-IP-CCSD using different basis sets and comparison with experimental value}
+\label{figure49}
+\end{figure}
+
+
+
+\begin{table}[H]\small
+\begin{center}
+\captionsetup{font=footnotesize}
+\caption{Experimental binding energies (in eV) for the valence band maximum (VBM) of ice from (a) \citep{henderson2002interaction} and (b) \citep{shibaguchi1977electronic}, partially solvated chloride ion in pure liquid from (c) \citep{markovich1994photoelectron} and chemical shift for the spin-orbit coupling componet of the 2P state of chloride ion on ice surface from (d) \citep{kong2017coexistence} and (e) \citep{parent2011hcl}} \label{tab:1}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+&Solvated chloride anion &\hspace*{0.4cm}VBM&\hspace*{0.4cm}VBM&\hspace*{0.2cm}Chemical shift\\
+&\hspace*{0.6cm}(Pure liquid)&\hspace*{0.5cm}$1b_{1}$&\hspace*{0.5cm}$3a_{1}$&\hspace*{0.5cm}2P state\\ 
+\hline
+Ice&\hspace*{0.4cm}&\hspace*{0.4cm}12.3 (a)&\hspace*{0.4cm}14.2 (a)&\hspace*{0.4cm}\\
+&&\hspace*{0.4cm}11.8 (b)&&\\
+\hline
+$Cl^{-1}/ice$&\hspace*{0.4cm}&\hspace*{0.4cm}&\hspace*{0.4cm}&\hspace*{0.4cm}2.2 (d)\\
+&&\hspace*{0.4cm}&&\hspace*{0.4cm}1.3 (e)\\
+\hline
+$Cl^{-1}/(H_{2}O)_{4}$&\hspace*{0.7cm}5.92 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
+&&\hspace*{0.4cm}&&\\
+\hline
+$Cl^{-1}/(H_{2}O)_{5}$&\hspace*{0.7cm}6.21 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
+&&\hspace*{0.4cm}&&\\
+\hline
+$Cl^{-1}/(H_{2}O)_{6}$&\hspace*{0.7cm}6.58 (c)&\hspace*{0.4cm}&\hspace*{0.4cm}&\\
+&&\hspace*{0.4cm}&&\\
+\hline
+\end{tabular}
+\label{table1o}
+\end{center}
+\end{table}
+
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 12.3cm, trim = 0cm 0cm 10cm 0cm]{AllspinR.png}
+\caption{Average electron binding energies spectra (in eV) for $[Cl^{-1}/(H_{2}O)_{n}]$ for various water cluster size obtained with DC-ZORA SAOP using TZ2P and QZ4P basis sets}
+\label{figure50}
+\end{figure}
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 10.8cm, trim = 0cm 0cm 10cm 0cm]{AllspinW.png}
+\caption{Average electron binding energies spectra (in eV) for $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various water cluster size obtained with DC-ZORA SAOP using TZ2P and QZ4P basis sets}
+\label{figure51}
+\end{figure}
+
+\begin{figure}[H]\large
+\captionsetup{font=footnotesize}
+\includegraphics[width = 10.8cm, trim = 0cm 0cm 10cm 0cm]{AllspinEOMR.png}
+\caption{Average electron binding energies spectra (in eV) for $[Cl^{-1}/(H_{2}O)_{n}]$ for various water cluster size obtained with DC CVS-EOM-IP-CCSD using TZ2P and QZ4P}
+\label{figure52}
+\end{figure}
+
 
 
 
 
 \section{Results of the impact of Cl ion on ice surface}
-Density of state (DOS) is useful to investigate the differences in the dynamics of the same kind of molecules. Figure ~\ref{figure1a} (a) and (b) depicts the DOS of chloride ion and solvated chloride ion respectively. The band close to -0.12 au (-3.3 eV) on both figures corresponds to the HOMO of the chloride ion. It can be seen that there is clear difference between the two spectrum. For the solvated chloride ion, the peaks seem to become broader compared to that of the unsolvated chloride ion. This is an indication that the quasi-liquid layer (QLL) on ice surface influences the ionic chloride. We must say that the total DOS changes drastically as the number of water molecules interacting with ionic chloride increases, however, the HOMO energies seem to remain almost the same. This is an indication that only few water molecules on ice surface is required to perturb the chloride and bind them into solvation. Thus, increase in the number of water molceules does lead to significat changes in the the orbital energies of HCl adsorption on ice surface as shown in figure ~\ref{figure1a} and ~\ref{figure2a}
-
-
-
-%\begin{table}[H]\tiny
-%\begin{center}
-%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{50}$} \label{tab:5}
-%\begin{tabular}{|l|l|l|l|l|l|l|}
-%\hline
-%$[Cl(H_{2}O)_{50}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{30}]$&$[Cl^{-1}/(H_{2}O)_{50}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{40}]$\\
-%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm} CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
-%\hline
-%\hspace*{0.5cm}-3.24&\hspace*{0.5cm}-2.97&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.03&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}-3.02&\hspace*{0.5cm}-3.01&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}-2.99&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.98&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\end{tabular}
-%\label{table5}
-%\end{center}
-%\end{table}
-
-
-%\begin{table}[H]\tiny
-%\begin{center}
-%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{100}$ } \label{tab:6}
-%\begin{tabular}{|l|l|l|l|l|l|l|}
-%\hline
-%$[Cl(H_{2}O)_{100}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$&$[Cl(H_{2}O)_{20}^{-1}/(H_{2}O)_{80}]$&$[Cl^{-1}/(H_{2}O)_{100}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{90}]$\\
-%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
-%\hline
-%\hspace*{0.5cm}-3.13&\hspace*{0.5cm}-2.73&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.76&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.85&\hspace*{0.5cm}&%\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.84&\hspace*{0.5cm}-2.83&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}-2.82&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\end{tabular}
-%\label{table6}
-%\end{center}
-%\end{table}
-
+Density of state (DOS) is useful to investigate the differences in the dynamics of the same kind of molecules. Figure ~\ref{figure55} (a) and (b) depicts the DOS of chloride ion and solvated chloride ion respectively. The band close to -0.12 au (-3.3 eV) on both figures corresponds to the HOMO of the chloride ion. It can be seen that there is clear difference between the two spectrum. For the solvated chloride ion, the peaks seem to become broader compared to that of the unsolvated chloride ion. This is an indication that the quasi-liquid layer (QLL) on ice surface influences the ionic chloride. We must say that the total DOS changes drastically as the number of water molecules interacting with ionic chloride increases, however, the HOMO energies seem to remain almost the same. This is an indication that only few water molecules on ice surface is required to perturb the chloride and bind them into solvation. Thus, increase in the number of water molceules does lead to significat changes in the the orbital energies of HCl adsorption on ice surface as shown in figure ~\ref{figure55} and ~\ref{figure55}
 
 \begin{figure}[H]\large
-\includegraphics[width = 14.0cm, trim = 0cm 0cm 10cm 0cm]{newfig50-100bar_edit.png}
-\caption{Variation of the binding energies of partially solvated chloride anion for different water cluster size on ice surface with respect to the number of water molecules relaxed in the cluster using the SR-ZORA and SAOP model in the DFT-in-DFT approach}
-\label{figure45}
+\captionsetup{font=footnotesize}
+\includegraphics[width = 14.0cm, trim = 0cm 0cm 10cm 0cm]{All_snapshots.png}
+\caption{Impact of the number of water molecules on gas phase chloride ion using DC SAOP in the DFT-in-DFT and DC CVS-EOM-IP-CCSD in the CC-in-DFT approach for 10 snapshots with respect to the binding energies in eV}
+\label{figure55}
 \end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nospincombTZ2P_r_r.png}
-\caption{Electron binding energies spectra for FnT systems of solvated chloride ion and its aqueous environment $\big([Cl^{-1}/(H_{2}O)_{n}]\big)$ for various cluster size using the SR-ZORA, SAOP model and TZ2P basis set; where n is the cluster size}
-\label{figure46}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nospincombQZ4P_r_r.png}
-\caption{Electron binding energies spectra for FnT systems of solvated chloride ion and its aqueous environment $\big([Cl^{-1}/(H_{2}O)_{n}]\big)$ for various cluster size using the SR-ZORA, SAOP model and QZ4P basis set; where n is the cluster size}
-\label{figure47}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{spincombTZ2P_r_r.png}
-\caption{Electron binding energies spectra for FnT systems of solvated chloride ion and its aqueous environment $\big([Cl^{-1}/(H_{2}O)_{n}]\big)$ for various cluster size using the DC-ZORA, SAOP model and TZ2P basis set; where n is the cluster size}
-\label{figure48}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{spincombQZ4P_r_r.png}
-\caption{Electron binding energies spectra for FnT systems of solvated chloride ion and its aqueous environment $\big([Cl^{-1}/(H_{2}O)_{n}]\big)$ for various cluster size using the DC-ZORA, SAOP model and QZ4P basis set; where n is the cluster size}
-\label{figure49}
-\end{figure}
-
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nospincombTZ2P_r_w.png}
-\caption{Electron binding energies spectra of $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various cluster size using the SR-ZORA, SAOP model and TZ2P basis set; where n is the number of water molecules in the subsystem of the environment}
-\label{figure50}
-\end{figure}
-
-\begin{figure}[H]\large
-\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{nospincombTZ2P_r_w.png}
-\caption{Electron binding energies spectra of $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various cluster size using the SR-ZORA, SAOP model and QZ4P basis set; where n is the number of water molecules in the subsystem of the environment}
-\label{figure51}
-\end{figure}
-
-%\begin{figure}[H]\large
-%\includegraphics[width = 12.0cm, trim = 0cm 0cm 10cm 0cm]{spincombTZ2P_r_w.png}
-%\caption{Electron binding energies spectra of $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/%(H_{2}O)_{n}]$ for various cluster size using the DC-ZORA, SAOP model and TZ2P basis set; where n is %the number of water molecules in the subsystem of the environment}
-%\label{figure52}
-%\end{figure}
-
-%\begin{figure}[H]\large
-%\includegraphics[width = 15.0cm, trim = 0cm 0cm 10cm 0cm]{spincombQZ4P_r_w.png}
-%\caption{Electron binding energies spectra of $[Cl^{-1}/(H_{2}O)_{n}]$ and $[(Cl(H_{2}O)_{10})^{-1}/(H_{2}O)_{n}]$ for various cluster size using the DC-ZORA, SAOP model and QZ4P basis set; where n is the number of water molecules in the subsystem of the environment}
-%\label{figure53}
-%\end{figure}
-
-
-
-
-%\begin{table}[H]\small
-%\begin{center}
-%\caption{Comparison of the orbital energies of the impact of Cl ion on ice surface using different Frozen density embedding (FDE) approaches for $H_{2}O)_{200}$ } \label{tab:7}
-%\begin{tabular}{|l|l|l|l|l|l|}
-%\hline
-%$[Cl(H_{2}O)_{200}]^{-1}$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$&$[Cl^{-1}/(H_{2}O)_{200}]$&$[Cl(H_{2}O)_{10}^{-1}/(H_{2}O)_{200}]$\\
-%\hspace*{0.1cm} SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}SAOP FDE&\hspace*{0.1cm}CV-EOM-IP-CC FDE&%\hspace*{0.1cm}CV-EOM-IP-CC FDE\\ 
-%\hline
-%\hspace*{0.5cm}-3.07&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.80&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.81&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.75&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.77&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.79&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\hspace*{0.5cm}&\hspace*{0.5cm}-2.78&\hspace*{0.5cm}&\hspace*{0.5cm}&\hspace*{0.5cm}\\
-%\hline
-%\end{tabular}
-%\label{table7}
-%\end{center}
-%\end{table}
-
-
-
-\section{Appendix}
-
 
 
 
